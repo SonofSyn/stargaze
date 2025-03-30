@@ -1,0 +1,62 @@
+# Project Structure: stargaze
+
+Generated on Sun, Mar 30, 2025 11:00:14 PM
+
+## Directory Structure
+
+- 📁 **backend/**
+  - 📁 **src/**
+    - main.ts
+    - server.ts
+  - package.json
+  - package-lock.json
+  - tsconfig.json
+- 📁 **database/**
+  - 📁 **sql/**
+    - 📁 **buildmodel/**
+      - init_model.sql
+  - 📁 **src/**
+    - main.ts
+  - package.json
+  - package-lock.json
+  - tsconfig.json
+- 📁 **frontend/**
+  - 📁 **public/**
+    - config.js
+    - logo.ico
+    - logo.png
+    - manifest.json
+    - robots.txt
+    - ttLOGO-SpamCheck RGB weiss.png
+  - 📁 **src/**
+    - 📁 **context/**
+      - GlobalAccountSettingsContext.tsx
+      - GlobalContext.tsx
+      - GlobalKeycloakContext.tsx
+      - GlobalStateContext.tsx
+      - GlobalViewContext.tsx
+    - 📁 **scss/**
+      - main.scss
+    - 📁 **structure/**
+      - Body.tsx
+      - Header.tsx
+    - 📁 **views/**
+      - Dashboard.tsx
+    - App.tsx
+    - index.tsx
+    - interface.ts
+    - serviceWorker.ts
+    - vite-env.d.ts
+  - index.html
+  - package.json
+  - package-lock.json
+  - tsconfig.json
+  - tsconfig.node.json
+  - vite.config.ts
+- .dockerignore
+- .gitignore
+- .prettierrc.yml
+- Dockerfile
+- mapper.sh
+- package.json
+- project_structure.md
