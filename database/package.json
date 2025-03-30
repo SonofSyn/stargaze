@@ -1,0 +1,37 @@
+{
+  "name": "stargaze_db",
+  "version": "0.1.0",
+  "description": "a database and interface to manage ttcrm",
+  "type": "module",
+  "types": "./dist/access.d.ts",
+  "module": "./dist/access.js",
+  "exports": "./dist/access.js",
+  "engines": {
+    "node": ">=16"
+  },
+  "keywords": [],
+  "author": "Kai Bissell",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "sql"
+  ],
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/pg": "^8.11.10",
+    "pg": "^8.8.0",
+    "dotenv": "^16.4.5"
+  },
+  "scripts": {
+    "prepack": "tsc",
+    "compile": "tsc",
+    "watch": "tsc --watch",
+    "prepublishOnly": "tsc",
+    "ttpgcmdext": "npx @tribe/ttpgcmd@latest exec --projectfile ./sql/project.json --run ext --username postgres --password geheim --database ttcrm --host localhost --watch",
+    "ttpgcmdcreate": "npx @tribe/ttpgcmd@latest exec --projectfile ./sql/project.json --run create --username postgres --password geheim --database ttcrm --host localhost --watch"
+  }
+}

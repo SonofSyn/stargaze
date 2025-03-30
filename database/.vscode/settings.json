@@ -1,0 +1,12 @@
+{
+  "yaml.schemas": {
+    "./node_modules/@tribe/ttmanifest/schemas/ttmanifest.schema.json": [
+      "**/ttmanifest.yaml",
+      "ttmanifest.yaml"
+    ],
+    "./node_modules/@tribe/ttmanifest/schemas/news.schema.json": [
+      "**/news.yaml",
+      "news.yaml"
+    ]
+  }
+}

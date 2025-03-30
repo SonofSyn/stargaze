@@ -1,0 +1,23 @@
+{
+    "devDependencies": {
+        "@commitlint/config-conventional": "^17.6.1",
+        "commitizen": "^4.3.0",
+        "commitlint": "^17.6.1",
+        "cz-conventional-changelog": "^3.3.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "scripts": {
+        "commit": "git-cz",
+        "precommit": "git add --all",
+        "postcommit": "git push",
+        "upload": "bash ./docker/upload.sh ./backend/",
+        "prebuild": "bash ./docker/update.sh TTAPP_VERSION ./backend/",
+        "build": "cd ./docker && docker compose --env-file ./build.env build",
+        "test": "echo \"no test specified\""
+    },
+    "dependencies": {}
+}

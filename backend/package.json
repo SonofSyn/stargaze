@@ -1,0 +1,49 @@
+{
+  "name": "stargaze",
+  "version": "1.0.0",
+  "type": "module",
+  "types": "./dist/main.d.ts",
+  "module": "./dist/main.js",
+  "exports": "./dist/main.js",
+  "scripts": {
+    "prepack": "tsc",
+    "compile": "tsc",
+    "watch": "tsc --watch",
+    "bundle": "npm pack",
+    "postbundle": "mv ./releases/latest/*.tgz ./releases && mv ./*.tgz ./releases/latest",
+    "prepublishOnly": "tsc",
+    "start": "nodemon ./dist/main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "keycloak-connect": "^26.1.1",
+    "nodemon": "^3.1.9",
+    "pg": "^8.14.1",
+    "typescript": "^5.8.2"
+  },
+  "files": [
+    "dist",
+    "client",
+    "template"
+  ],
+  "nodemonConfig": {
+    "ignore": [
+      "config.js",
+      "*.json"
+    ]
+  },
+  "devDependencies": {
+    "@types/ajv": "^1.0.4",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.3",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.14",
+    "@types/nodemon": "^1.19.6"
+  }
+}
