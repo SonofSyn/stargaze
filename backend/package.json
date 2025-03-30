@@ -25,7 +25,8 @@
     "keycloak-connect": "^26.1.1",
     "nodemon": "^3.1.9",
     "pg": "^8.14.1",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "winston": "^3.17.0"
   },
   "files": [
     "dist",
