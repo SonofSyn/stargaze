@@ -1,26 +1,4 @@
 
-/*ttpg
-    import:
-         - dropall.sql
-         - buildin:sys/autotablefunctions.sql
-*/
-
-/*ttpg 
-    ensure: notables
-*/
-
-/*ttpg
-    import:
-         - buildin:sys/jsonchecks.sql
-         - tools.sql
-*/
-
-/*ttpg
-    desc: Create Model
-    createERM: ./model.md
- */
-
-
  
 CREATE TABLE users (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
